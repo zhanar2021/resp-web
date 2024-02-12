@@ -1,0 +1,121 @@
+:root {
+  --bgc-mobile: rgb(141, 195, 65);
+  --bgc-desktop: tomato;
+  --bgc-tablet: rgb(56, 56, 127);
+}
+
+body,
+ul li {
+  background-color: var(--bgc-mobile);
+}
+.white-area {
+  background-color: white;
+}
+span {
+  color: orange;
+  font-weight: bold;
+}
+
+#large {
+  font-size: 1.5em;
+}
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  color: white;
+  font-weight: 900;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 5px;
+  margin-top: 5px;
+  list-style: none;
+  align-content: left;
+}
+
+ul li:hover {
+  background-color: white;
+  color: var(--bgc-mobile);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav,
+main,
+aside {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+}
+aside {
+  background-color: lightpink;
+  text-shadow: 1px 0.2px;
+}
+
+footer {
+  background-color: darkgray;
+  border: 2px solid gray;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  body,
+  ul li {
+    background-color: var(--bgc-tablet);
+  }
+  .container {
+    display: flex;
+  }
+  nav,
+  main {
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+  }
+  aside {
+    width: 95%;
+  }
+
+  ul li:hover {
+    color: var(--bgc-tablet);
+  }
+  .white-area {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body,
+  ul li {
+    background-color: var(--bgc-desktop);
+  }
+
+  ul {
+    padding-left: 0;
+  }
+  ul li {
+    width: 80%;
+  }
+  ul li:hover {
+    color: var(--bgc-desktop);
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav,
+  main,
+  aside {
+    width: 28vw;
+    padding: 10px;
+    margin: 10px;
+  }
+}
